@@ -1,0 +1,12 @@
+{
+  "name": "tiktok-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jayke770/tiktok-api.git",
+  "author": "Jayke770 <jakevelasco40@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^19.4.1"
+  }
+}
