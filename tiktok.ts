@@ -19,6 +19,7 @@ const api = {
             executablePath: process.env.CHROME_PATH
         })
         const page = await browser.newPage()
+        await page.setDefaultNavigationTimeout(0)
         await page.goto(`${tiktokurl}${username}`)
         const body = await page.$("body")
         const bodyText = await (await body?.getProperty("innerText")).jsonValue()
