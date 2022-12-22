@@ -1,12 +1,12 @@
 module.exports = {
     apps: [{
-        name: "bot",
+        name: "tiktok-info-bot",
         script: "./dist/bot.js",
         env_production: {
             NODE_ENV: "production"
         }
     }, {
-        name: "api",
+        name: "tiktok-info-api",
         script: "./dist/api.js"
     }]
 }
