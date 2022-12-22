@@ -5,7 +5,7 @@ import { apiThrottler } from "@grammyjs/transformer-throttler"
 import { type Conversation, type ConversationFlavor, conversations, createConversation, } from "@grammyjs/conversations"
 type MyContext = Context & ConversationFlavor
 type MyConversation = Conversation<MyContext>
-const BOT_TOKEN = ""
+const { BOT_TOKEN } = process.env
 const bot = new Bot<MyContext>(BOT_TOKEN as string)
 const throttler = apiThrottler()
 bot.api.config.use(throttler)
