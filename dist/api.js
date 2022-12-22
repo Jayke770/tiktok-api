@@ -16,7 +16,13 @@ const express_1 = __importDefault(require("express"));
 const tiktok_1 = __importDefault(require("./tiktok"));
 const app = (0, express_1.default)();
 app.get("/user/:username", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    return res.send(yield tiktok_1.default.fethUser(req.params['username']));
+    try {
+        const data = yield tiktok_1.default.fethUser(req.params['username']);
+        return res.send(data);
+    }
+    catch (e) {
+        return res.send(e);
+    }
 }));
 app.listen(1434, () => {
     console.log("Server fasfsafj");
