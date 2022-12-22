@@ -1,8 +1,18 @@
+//@ts-nocheck
 import puppeteer from 'puppeteer'
 const tiktokurl = `https://www.tiktok.com/`
+type UserData = {
+    following?: number,
+    name?: string | null,
+    followers?: number,
+    likes?: number,
+    username?: string | null,
+    bio?: string,
+    profile?: string
+}
 const api = {
-    fethUser: async (username) => {
-        let data = { following: 0, name: '', followers: 0, likes: 0, username: username, bio: '', profile: '' }
+    fethUser: async (username: string): Promise<UserData> => {
+        let data: UserData = { followers: 0, following: 0, likes: 0 }
         const browser = await puppeteer.launch()
         const page = await browser.newPage()
         await page.goto(`${tiktokurl}${username}`)
@@ -26,7 +36,10 @@ const api = {
         await browser.close()
         return data
     },
-    convertNumberAbbreviation: (str) => {
+    followUSer: async (username: string) => {
+
+    },
+    convertNumberAbbreviation: (str: string) => {
         const regex = /^([\d.]+)([a-z]+)$/i;
         const match = regex.exec(str);
 
@@ -49,4 +62,4 @@ const api = {
         }
     }
 }
-console.log(await api.fethUser("@jayke770"))
+export default api
