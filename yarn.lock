@@ -30,6 +30,47 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@deno/shim-deno-test@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@deno/shim-deno-test/-/shim-deno-test-0.4.0.tgz#2ff56821854c51323c0cd08a4a56d668f84367ba"
+  integrity sha512-oYWcD7CpERZy/TXMTM9Tgh1HD/POHlbY9WpzmAk+5H8DohcxG415Qws8yLGlim3EaKBT2v3lJv01x4G0BosnaQ==
+
+"@deno/shim-deno@~0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@deno/shim-deno/-/shim-deno-0.11.0.tgz#02b3e56feb8ecca8caf8498ad3de48f0d91e23e9"
+  integrity sha512-z5FRYleehfz1Z0Wp9jilB98cJRGV2HYiLN0FZu1/xwLrQk+hk5VaNKp1nEoyGrUM4MLruTlnhEbqHJwxfnbPLw==
+  dependencies:
+    "@deno/shim-deno-test" "^0.4.0"
+    which "^2.0.2"
+
+"@grammyjs/conversations@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@grammyjs/conversations/-/conversations-1.1.0.tgz#05b9af605030268c2a298aeac42063e4e45e350b"
+  integrity sha512-oDddi8ELuoFYIblqXEoQTX2ywhoqYrvgwLYPllqaBofRPtUws5TtxwsFs2E/oAxDP0DoGDxoL8EkukEK2LyA7Q==
+  dependencies:
+    "@grammyjs/types" "^2.8.2"
+    debug "^4.3.4"
+    o-son "^1.0.0"
+
+"@grammyjs/runner@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@grammyjs/runner/-/runner-1.0.4.tgz#b305c2cac02bd86ff8ef2116446af9faa8d95d72"
+  integrity sha512-77IE+2Gg0UHa9MNZ8wsculxJpzUDcHTrMg7OLbKoQ8jWKFxX78sdxRBwL+FK3NvHZ15YnXsnxesV43xgbOhteA==
+  dependencies:
+    abort-controller "^3.0.0"
+
+"@grammyjs/transformer-throttler@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@grammyjs/transformer-throttler/-/transformer-throttler-1.2.1.tgz#250b93ea8d15158dac5fb8482cba300aa24666f1"
+  integrity sha512-CpWB0F3rJdUiKsq7826QhQsxbZi4wqfz1ccKX+fr+AOC+o8K7ZvS+wqX0suSu1QCsyUq2MDpNiKhyL2ZOJUS4w==
+  dependencies:
+    bottleneck "^2.0.0"
+
+"@grammyjs/types@^2.10.3", "@grammyjs/types@^2.8.2":
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-2.10.3.tgz#4f944003ba87ac54dfd3ee36daf68bd44ccb685e"
+  integrity sha512-8TG9uiJlPcwFb5fxJ2LdQw0eWKDmHoVYY0vS63vwHb7wJIOmZHPpPfEWKRNtEcc7/e7HHZ5qoxixZ24dPjU3Fg==
+
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"
@@ -137,6 +178,13 @@
   dependencies:
     "@types/node" "*"
 
+abort-controller@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
+  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
+  dependencies:
+    event-target-shim "^5.0.0"
+
 accepts@~1.3.8:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.8.tgz#0bf0be125b67014adcb0b0921e62db7bffe16b2e"
@@ -220,6 +268,11 @@ body-parser@1.20.1:
     raw-body "2.5.1"
     type-is "~1.6.18"
     unpipe "1.0.0"
+
+bottleneck@^2.0.0:
+  version "2.19.5"
+  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.19.5.tgz#5df0b90f59fd47656ebe63c78a98419205cadd91"
+  integrity sha512-VHiNCbI1lKdl44tGrhNfU3lup0Tj/ZBMJB5/2ZbNXRCPuRCO7ed2mgcK4r17y+KB2EfuYuRaVlwNbAeaWGSpbw==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -342,7 +395,7 @@ debug@2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@4.3.4, debug@^4.1.1:
+debug@4, debug@4.3.4, debug@^4.1.1, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -407,6 +460,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
+
+event-target-shim@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
 express@^4.18.2:
   version "4.18.2"
@@ -529,6 +587,16 @@ glob@^7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+grammy@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.12.1.tgz#196bc103869221b82920b035161f2210644a678c"
+  integrity sha512-pnAVs5ZqA4Dfby+JUDIzcq5xgRZm1qDKveU/kQyt31Ln19NF0PgUooczQ1AiTUTC8Yv/et9Ok8R2BiQcskoJew==
+  dependencies:
+    "@grammyjs/types" "^2.10.3"
+    abort-controller "^3.0.0"
+    debug "^4.3.4"
+    node-fetch "^2.6.7"
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -607,6 +675,11 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
   integrity sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==
+
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+  integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -699,12 +772,19 @@ negotiator@0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-node-fetch@2.6.7:
+node-fetch@2, node-fetch@2.6.7, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
+
+o-son@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/o-son/-/o-son-1.0.1.tgz#0e4f575a5c232fb542ab4e73e897b1c0d131b4c3"
+  integrity sha512-u3X+gVI4BalcHsFe75miy3UxG3pNcJzXDCS8N5eJLlYY1EdiUC8amUsbXMWlAqJUKJgGTM9OBqAuxvTUACKs2g==
+  dependencies:
+    "@deno/shim-deno" "~0.11.0"
 
 object-inspect@^1.9.0:
   version "1.12.2"
@@ -1048,6 +1128,13 @@ whatwg-url@^5.0.0:
   dependencies:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
+
+which@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
+  integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
+  dependencies:
+    isexe "^2.0.0"
 
 wrappy@1:
   version "1.0.2"
