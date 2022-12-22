@@ -14,7 +14,10 @@ type UserData = {
 const api = {
     fethUser: async (username?: string): Promise<{ status: boolean, data: UserData }> => {
         let data: UserData = {}
-        const browser = await puppeteer.launch()
+        console.log('fas', process.env.CHROME_PATH)
+        const browser = await puppeteer.launch({
+            executablePath: process.env.CHROME_PATH
+        })
         const page = await browser.newPage()
         await page.goto(`${tiktokurl}${username}`)
         const body = await page.$("body")
