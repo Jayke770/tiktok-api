@@ -3,6 +3,7 @@ import { Bot, Context, session } from 'grammy'
 import { run } from "@grammyjs/runner"
 import { apiThrottler } from "@grammyjs/transformer-throttler"
 import { type Conversation, type ConversationFlavor, conversations, createConversation, } from "@grammyjs/conversations"
+import 'dotenv/config'
 type MyContext = Context & ConversationFlavor
 type MyConversation = Conversation<MyContext>
 const { BOT_TOKEN } = process.env
