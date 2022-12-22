@@ -13,6 +13,7 @@
     "api:dev": "ts-node api.ts"
   },
   "dependencies": {
+    "@grammyjs/conversations": "^1.1.0",
     "@grammyjs/runner": "^1.0.4",
     "@grammyjs/transformer-throttler": "^1.2.1",
     "express": "^4.18.2",
