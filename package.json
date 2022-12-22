@@ -8,7 +8,9 @@
   "scripts": {
     "build": "npx tsc",
     "bot": "node /dist/bot.js",
-    "bot:dev": "ts-node bot.ts"
+    "bot:dev": "ts-node bot.ts",
+    "api": "node /dist/api.js",
+    "api:dev": "ts-node api.ts"
   },
   "dependencies": {
     "@grammyjs/runner": "^1.0.4",
