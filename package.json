@@ -10,7 +10,8 @@
     "bot": "node dist/bot.js",
     "bot:dev": "ts-node bot.ts",
     "api": "node dist/api.js",
-    "api:dev": "ts-node api.ts"
+    "api:dev": "ts-node api.ts",
+    "all": "pm2 start ecosystem.config.js"
   },
   "dependencies": {
     "@grammyjs/conversations": "^1.1.0",
